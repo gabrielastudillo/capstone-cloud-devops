@@ -43,7 +43,7 @@ pipeline {
         stage("Clean") {
               steps{
                     echo 'Cleaning'
-                    sh "docker system prune"
+                    sh "docker system prune -f"
               }
         }
     }
