@@ -21,6 +21,10 @@ pipeline {
                   withDockerRegistry([url: "", credentialsId: "dockerhub_id"]) {
                       sh "docker tag capstone-cloud-devops gastudillo/capstone-cloud-devops"
                       sh 'docker push gastudillo/capstone-cloud-devops'
+                  }
+              }
+         }
+
         stage('Deploy AWS infra') {
               steps{
                   echo 'Deploying Infra'
@@ -36,8 +40,5 @@ pipeline {
                   }
               }
         }
-                  }
-              }
-         }
-     }
+    }
 }
