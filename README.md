@@ -15,6 +15,10 @@ I created a CI/CD pipeline for microservices applications with rolling deploymen
 - Deploying these Docker containers to a AWS EKS
 - I ran these from Jenkins.
 
+To deploy the cluster, Ised eksctl into AWS EKS:
+
+eksctl create cluster --name devopscluster --version 1.16 --nodegroup-name standard-workers --node-type t2.medium --nodes 3 --nodes-min 1 --nodes-max 4 --node-ami auto --region us-east-1 --zones=us-east-1a,us-east-1b
+
 
 &nbsp;
 
